@@ -9,12 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    let softtime=5;
+    let mediumtime=7;
+    let hardtime=12;
     @IBAction func EggController(_ sender: UIButton) {
-        if(sender.currentTitle=="Soft"){
-            print("Soft")
+        let hardness=sender.currentTitle
+        switch hardness {
+        case "Soft":
+            print("SoftEgg")
+        case "Medium":
+            print("Mediumegg")
+        case "Hard":
+            print("HardEgg")
+        default:  ///!! Do not forget to write the default statement else switch case must be exthaustive error will happen
+            print("NoEgg")
+            
         }
+        
+        
     }
-
-
 }
