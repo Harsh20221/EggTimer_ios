@@ -9,23 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let softtime=5;
-    let mediumtime=7;
-    let hardtime=12;
+    let softtime=300;
+    let mediumtime=420;
+    let hardtime=720;
+    
+    
     @IBAction func EggController(_ sender: UIButton) {
-        let hardness=sender.currentTitle
-        switch hardness {
+        var timeLeft : Int=0;
+        
+        switch sender.currentTitle{
         case "Soft":
-            print("SoftEgg")
+            timeLeft=softtime;
         case "Medium":
-            print("Mediumegg")
+            timeLeft=mediumtime
         case "Hard":
-            print("HardEgg")
-        default:  ///!! Do not forget to write the default statement else switch case must be exthaustive error will happen
-            print("NoEgg")
-            
+            timeLeft=hardtime
+        default : print("Error");
         }
         
-        
+       
+                /////This is How you can create a Timer in Swift
+                      Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                               print("timer fired!")
+                        
+                            timeLeft -= 1
+                          print(timeLeft, "Seconds")
+                        
+                          if(timeLeft==0){
+                                    timer.invalidate()
+                                }
+                       }
     }
 }
