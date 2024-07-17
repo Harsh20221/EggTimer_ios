@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBAction func EggController(_ sender: UIButton) {
+        if(sender.currentTitle=="Soft"){
+            print("Soft")
+        }
+    }
 
 
 }
