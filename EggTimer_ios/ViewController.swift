@@ -13,9 +13,10 @@ class ViewController: UIViewController {
     let mediumtime=420;
     let hardtime=720;
     
-    
+    var timer = Timer() //# This timer variable will fix the issue of multiple timer running at same time
     @IBAction func EggController(_ sender: UIButton) {
         var timeLeft : Int=0;
+        timer.invalidate() //* we'll invalidate current timer if we press the button again to avaoid multiple timers running at same time issue
         
         switch sender.currentTitle{
         case "Soft":
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
         
        
                 /////This is How you can create a Timer in Swift
-                      Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                                print("timer fired!")
                         
                             timeLeft -= 1
