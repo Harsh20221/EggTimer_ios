@@ -9,27 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let softtime=300;
-    let mediumtime=420;
-    let hardtime=720;
+    let softtime=30;
+    let mediumtime=42;
+    let hardtime=72;
     
-    var timer = Timer() //# This timer variable will fix the issue of multiple timer running at same time
+    var timer = Timer(); //# This timer variable will fix the issue of multiple timer running at same time
     
+   
     
-    
+    @IBOutlet var ProgressbarView: UIProgressView!;
+
     @IBOutlet var Titleoutlet: UILabel!
-    
+   
     @IBAction func EggController(_ sender: UIButton) {
-        var timeLeft : Int=0;
+        Titleoutlet.text="How do you like your eggs?"
+        var timepassed : Int=0;
         timer.invalidate() //* we'll invalidate current timer if we press the button again to avaoid multiple timers running at same time issue
-        
+        var totaltime:Int=0;
+      
         switch sender.currentTitle{
         case "Soft":
-            timeLeft=softtime;
+            totaltime=softtime;
         case "Medium":
-            timeLeft=mediumtime
+            totaltime=mediumtime
         case "Hard":
-            timeLeft=hardtime
+            totaltime=hardtime
         default : print("Error");
         }
         
@@ -38,10 +42,11 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [self] timer in
                                print("timer fired!")
                         
-                            timeLeft -= 1
-                          print(timeLeft, "Seconds")
+                            timepassed += 1
+            ProgressbarView.progress=Float(Float(timepassed)/Float(totaltime))
+                          print(timepassed, "Seconds")
                         
-                          if(timeLeft==0){
+                          if(timepassed==totaltime){
                                     timer.invalidate()
                               Titleoutlet.text="Done"
                                 }
