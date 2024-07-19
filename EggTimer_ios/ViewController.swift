@@ -9,9 +9,9 @@ import AVFoundation
 import UIKit
 
 class ViewController: UIViewController {
-    let softtime=3;
-    let mediumtime=42;
-    let hardtime=72;
+    let softtime=300;
+    let mediumtime=420;
+    let hardtime=720;
     
     var timer = Timer(); //# This timer variable will fix the issue of multiple timer running at same time
     var player: AVAudioPlayer?
