@@ -16,6 +16,7 @@
 		693BE8012C474D1B00C1D627 /* EggTimer_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BE8002C474D1B00C1D627 /* EggTimer_iosTests.swift */; };
 		693BE80B2C474D1B00C1D627 /* EggTimer_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BE80A2C474D1B00C1D627 /* EggTimer_iosUITests.swift */; };
 		693BE80D2C474D1B00C1D627 /* EggTimer_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693BE80C2C474D1B00C1D627 /* EggTimer_iosUITestsLaunchTests.swift */; };
+		695107F92C4AB06F000923EB /* alarm_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 695107F82C4AB06F000923EB /* alarm_sound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		693BE8062C474D1B00C1D627 /* EggTimer_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EggTimer_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		693BE80A2C474D1B00C1D627 /* EggTimer_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimer_iosUITests.swift; sourceTree = "<group>"; };
 		693BE80C2C474D1B00C1D627 /* EggTimer_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimer_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		695107F82C4AB06F000923EB /* alarm_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = alarm_sound.wav; path = ../../Downloads/alarm_sound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				693BE7EB2C474D1A00C1D627 /* SceneDelegate.swift */,
 				693BE7ED2C474D1A00C1D627 /* ViewController.swift */,
 				693BE7EF2C474D1A00C1D627 /* Main.storyboard */,
+				695107EF2C4AABDC000923EB /* Sounds */,
 				693BE7F22C474D1B00C1D627 /* Assets.xcassets */,
 				693BE7F42C474D1B00C1D627 /* LaunchScreen.storyboard */,
 				693BE7F72C474D1B00C1D627 /* Info.plist */,
@@ -125,6 +128,15 @@
 				693BE80C2C474D1B00C1D627 /* EggTimer_iosUITestsLaunchTests.swift */,
 			);
 			path = EggTimer_iosUITests;
+			sourceTree = "<group>";
+		};
+		695107EF2C4AABDC000923EB /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				695107F82C4AB06F000923EB /* alarm_sound.wav */,
+			);
+			name = Sounds;
+			path = ../../../../Desktop/Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695107F92C4AB06F000923EB /* alarm_sound.wav in Resources */,
 				693BE7F32C474D1B00C1D627 /* Assets.xcassets in Resources */,
 				693BE7F62C474D1B00C1D627 /* Base in Resources */,
 				693BE7F12C474D1A00C1D627 /* Base in Resources */,
